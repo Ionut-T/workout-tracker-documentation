@@ -1,0 +1,1066 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>workout-tracker documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	      <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">workout-tracker documentation</a>
+            <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+                <div id="book-search-input" role="search"><input type="text" placeholder="Type to search"></div>            <compodoc-menu></compodoc-menu>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <compodoc-menu mode="normal"></compodoc-menu>
+               </div>
+               <!-- START CONTENT -->
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>WorkoutService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#info" role="tab" id="info-tab" data-toggle="tab" data-link="info">Info</a>
+        </li>
+        <li >
+            <a href="#source" role="tab" id="source-tab" data-toggle="tab" data-link="source">Source</a>
+        </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="c-info">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/workout/workout.service.ts</code>
+        </p>
+
+
+
+
+            <section>
+    <h3 id="index">Index</h3>
+    <table class="table table-sm table-bordered index-table">
+        <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Properties</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                <a href="#exercisesChanged$">exercisesChanged$</a>
+                            </li>
+                            <li>
+                                <a href="#finishedWorkoutChanged$">finishedWorkoutChanged$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#firebaseSubscriptions$">firebaseSubscriptions$</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#listOfExercises">listOfExercises</a>
+                            </li>
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#runningWorkout">runningWorkout</a>
+                            </li>
+                            <li>
+                                <a href="#selectedExercise$">selectedExercise$</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                        <h6><b>Methods</b></h6>
+                    </td>
+                </tr>
+                <tr>
+                    <td class="col-md-4">
+                        <ul class="index-list">
+                            <li>
+                                    <span class="modifier">Private</span>
+                                <a href="#addDataToDatabase">addDataToDatabase</a>
+                            </li>
+                            <li>
+                                <a href="#cancelFirebaseSubscriptions$">cancelFirebaseSubscriptions$</a>
+                            </li>
+                            <li>
+                                <a href="#cancelWorkout">cancelWorkout</a>
+                            </li>
+                            <li>
+                                <a href="#completeWorkout">completeWorkout</a>
+                            </li>
+                            <li>
+                                <a href="#getCompletedOrCancelledWorkout">getCompletedOrCancelledWorkout</a>
+                            </li>
+                            <li>
+                                <a href="#getListOfExercises">getListOfExercises</a>
+                            </li>
+                            <li>
+                                <a href="#getRunningWorkout">getRunningWorkout</a>
+                            </li>
+                            <li>
+                                <a href="#startWorkout">startWorkout</a>
+                            </li>
+                        </ul>
+                    </td>
+                </tr>
+
+
+
+
+
+        </tbody>
+    </table>
+</section>
+
+            <section>
+    <h3 id="constructor">Constructor</h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+<code>constructor(db: AngularFirestore, afAuth: AngularFireAuth, uiService: <a href="../injectables/UIService.html">UIService</a>)</code>
+                    </td>
+                </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/workout/workout.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+                <tr>
+                    <td class="col-md-4">
+                            <div>
+                                    <b>Parameters :</b>
+                                    <table class="params">
+                                        <thead>
+                                            <tr>
+                                                <td>Name</td>
+                                                    <td>Type</td>
+                                                <td>Optional</td>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                                <tr>
+                                                        <td>db</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFirestore</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>afAuth</td>
+                                                  
+                                                        <td>
+                                                                    <code>AngularFireAuth</code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                                <tr>
+                                                        <td>uiService</td>
+                                                  
+                                                        <td>
+                                                                        <code><a href="../injectables/UIService.html" target="_self" >UIService</a></code>
+                                                        </td>
+                                                  
+                                                    <td>
+                                                            No
+                                                    </td>
+                                                    
+                                                </tr>
+                                        </tbody>
+                                    </table>
+                            </div>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+</section>
+
+            <section>
+    
+    <h3 id="methods">
+        Methods
+    </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="addDataToDatabase"></a>
+                    <span class="name">
+                        <b>
+                            <span class="modifier">Private</span>
+                            addDataToDatabase
+                        </b>
+                        <a href="#addDataToDatabase"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+                    <span class="modifier-icon icon ion-ios-reset"></span>
+                    <code>addDataToDatabase(workout: <a href="../interfaces/Exercise.html">Exercise</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="153"
+                            class="link-to-prism">src/app/workout/workout.service.ts:153</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Add completed or cancelled workout to the database.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>workout</td>
+                                    <td>
+                                                <code><a href="../interfaces/Exercise.html" target="_self" >Exercise</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelFirebaseSubscriptions$"></a>
+                    <span class="name">
+                        <b>
+                            cancelFirebaseSubscriptions$
+                        </b>
+                        <a href="#cancelFirebaseSubscriptions$"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelFirebaseSubscriptions$()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="144"
+                            class="link-to-prism">src/app/workout/workout.service.ts:144</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Cancel all firebase subscriptions.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="cancelWorkout"></a>
+                    <span class="name">
+                        <b>
+                            cancelWorkout
+                        </b>
+                        <a href="#cancelWorkout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>cancelWorkout(progress: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank">number</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="105"
+                            class="link-to-prism">src/app/workout/workout.service.ts:105</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Store the results if workout is cancelled and reset the workout in progress.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>progress</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="completeWorkout"></a>
+                    <span class="name">
+                        <b>
+                            completeWorkout
+                        </b>
+                        <a href="#completeWorkout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>completeWorkout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="92"
+                            class="link-to-prism">src/app/workout/workout.service.ts:92</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Store the results if workout is complete and reset the workout in progress.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getCompletedOrCancelledWorkout"></a>
+                    <span class="name">
+                        <b>
+                            getCompletedOrCancelledWorkout
+                        </b>
+                        <a href="#getCompletedOrCancelledWorkout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getCompletedOrCancelledWorkout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="129"
+                            class="link-to-prism">src/app/workout/workout.service.ts:129</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Fetch completed or cancelled workout from the server.
+Emit a new value whenever the user gets a new finished workout session
+from the server.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getListOfExercises"></a>
+                    <span class="name">
+                        <b>
+                            getListOfExercises
+                        </b>
+                        <a href="#getListOfExercises"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getListOfExercises()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="35"
+                            class="link-to-prism">src/app/workout/workout.service.ts:35</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Indicate the loading process and emit an event after the process is finished.
+Get the list of exercises from the firestore database
+-&gt; returns an array of exercises based on Exercise model.
+Populate the list of exercises.
+Store the fetched exercises.
+Emit a new copy of the list of exercises.
+Handle errors if any.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="getRunningWorkout"></a>
+                    <span class="name">
+                        <b>
+                            getRunningWorkout
+                        </b>
+                        <a href="#getRunningWorkout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>getRunningWorkout()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="120"
+                            class="link-to-prism">src/app/workout/workout.service.ts:120</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns a copy of the workout in progress.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >any</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="startWorkout"></a>
+                    <span class="name">
+                        <b>
+                            startWorkout
+                        </b>
+                        <a href="#startWorkout"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>startWorkout(selectedId: <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank">string</a>)</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="79"
+                            class="link-to-prism">src/app/workout/workout.service.ts:79</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-description"><p>Returns the selected exercise by the user.
+Emit a copy of the selected exercise.</p>
+</div>
+
+                    <div class="io-description">
+                        <b>Parameters :</b>
+                        <table class="params">
+                            <thead>
+                                <tr>
+                                    <td>Name</td>
+                                    <td>Type</td>
+                                    <td>Optional</td>
+                                    <td>Description</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>selectedId</td>
+                                    <td>
+                                                <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
+                                    </td>
+
+                                    <td>
+                                        No
+                                    </td>
+
+
+                                    <td>
+                                        <p>id of the exercise selected by the user.</p>
+
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div>
+                    </div>
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                    <div class="io-description">
+                        
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</section>
+            <section>
+    
+        <h3 id="inputs">
+            Properties
+        </h3>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="exercisesChanged$"></a>
+                        <span class="name">
+                            <b>
+                            exercisesChanged$</b>
+                            <a href="#exercisesChanged$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;Exercise[]&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="16" class="link-to-prism">src/app/workout/workout.service.ts:16</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="finishedWorkoutChanged$"></a>
+                        <span class="name">
+                            <b>
+                            finishedWorkoutChanged$</b>
+                            <a href="#finishedWorkoutChanged$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;Exercise[]&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="17" class="link-to-prism">src/app/workout/workout.service.ts:17</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="firebaseSubscriptions$"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            firebaseSubscriptions$</b>
+                            <a href="#firebaseSubscriptions$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>Subscription[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="18" class="link-to-prism">src/app/workout/workout.service.ts:18</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="listOfExercises"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            listOfExercises</b>
+                            <a href="#listOfExercises"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Exercise.html" target="_self" >Exercise[]</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/workout/workout.service.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="runningWorkout"></a>
+                        <span class="name">
+                            <b>
+                                <span class="modifier">Private</span>
+                            runningWorkout</b>
+                            <a href="#runningWorkout"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="../interfaces/Exercise.html" target="_self" >Exercise</a></code>
+
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="14" class="link-to-prism">src/app/workout/workout.service.ts:14</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="selectedExercise$"></a>
+                        <span class="name">
+                            <b>
+                            selectedExercise$</b>
+                            <a href="#selectedExercise$"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>new Subject&lt;Exercise&gt;()</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/workout/workout.service.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+</section>
+
+    </div>
+
+
+    <div class="tab-pane fade  tab-source-code" id="c-source">
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { Exercise } from &#x27;./exercise.model&#x27;;
+import { Subject, Subscription } from &#x27;rxjs&#x27;;
+import { AngularFirestore } from &#x27;@angular/fire/firestore&#x27;;
+import { map } from &#x27;rxjs/operators&#x27;;
+import { AngularFireAuth } from &#x27;@angular/fire/auth&#x27;;
+import { UIService } from &#x27;../shared/ui.service&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;
+})
+export class WorkoutService {
+  private listOfExercises: Exercise[] &#x3D; [];
+  private runningWorkout: Exercise;
+  selectedExercise$ &#x3D; new Subject&lt;Exercise&gt;();
+  exercisesChanged$ &#x3D; new Subject&lt;Exercise[]&gt;();
+  finishedWorkoutChanged$ &#x3D; new Subject&lt;Exercise[]&gt;();
+  private firebaseSubscriptions$: Subscription[] &#x3D; [];
+
+  constructor(
+    private db: AngularFirestore,
+    private afAuth: AngularFireAuth,
+    private uiService: UIService
+  ) {}
+
+  /**
+   * Indicate the loading process and emit an event after the process is finished.
+   * Get the list of exercises from the firestore database
+   * -&gt; returns an array of exercises based on Exercise model.
+   * Populate the list of exercises.
+   * Store the fetched exercises.
+   * Emit a new copy of the list of exercises.
+   * Handle errors if any.
+   */
+  getListOfExercises() {
+    this.uiService.loadingStateChanged$.next(true);
+    this.firebaseSubscriptions$.push(
+      this.db
+        .collection(&#x27;listOfExercises&#x27;)
+        .snapshotChanges()
+        .pipe(
+          map(docArray &#x3D;&gt; {
+            return docArray.map(document &#x3D;&gt; {
+              return {
+                id: document.payload.doc.id,
+                name: document.payload.doc.get(&#x27;name&#x27;),
+                duration: document.payload.doc.get(&#x27;duration&#x27;),
+                calories: document.payload.doc.get(&#x27;calories&#x27;)
+              };
+            });
+          })
+        )
+        .subscribe(
+          (exercises: Exercise[]) &#x3D;&gt; {
+            this.uiService.loadingStateChanged$.next(false);
+            this.listOfExercises &#x3D; exercises;
+            this.exercisesChanged$.next([...this.listOfExercises]);
+          },
+          error &#x3D;&gt; {
+            this.uiService.loadingStateChanged$.next(false);
+            this.uiService.showSnackBar(
+              &#x27;Loading exercises failed. Please try again later.&#x27;,
+              null,
+              5000,
+              &#x27;top&#x27;
+            );
+            this.exercisesChanged$.next(null);
+          }
+        )
+    );
+  }
+
+  /**
+   * Returns the selected exercise by the user.
+   * Emit a copy of the selected exercise.
+   * @param selectedId
+   * id of the exercise selected by the user.
+   */
+  startWorkout(selectedId: string) {
+    this.runningWorkout &#x3D; this.listOfExercises.find(
+      exercise &#x3D;&gt; exercise.id &#x3D;&#x3D;&#x3D; selectedId
+    );
+
+    this.selectedExercise$.next({
+      ...this.runningWorkout
+    });
+  }
+
+  /**
+   * Store the results if workout is complete and reset the workout in progress.
+   */
+  completeWorkout() {
+    this.addDataToDatabase({
+      ...this.runningWorkout,
+      date: new Date(),
+      state: &#x27;completed&#x27;
+    });
+    this.runningWorkout &#x3D; null;
+    this.selectedExercise$.next(null);
+  }
+
+  /**
+   * Store the results if workout is cancelled and reset the workout in progress.
+   */
+  cancelWorkout(progress: number) {
+    this.addDataToDatabase({
+      ...this.runningWorkout,
+      duration: this.runningWorkout.duration * (progress / 100),
+      calories: this.runningWorkout.calories * (progress / 100),
+      date: new Date(),
+      state: &#x27;cancelled&#x27;
+    });
+    this.runningWorkout &#x3D; null;
+    this.selectedExercise$.next(null);
+  }
+
+  /**
+   * Returns a copy of the workout in progress.
+   */
+  getRunningWorkout() {
+    return { ...this.runningWorkout };
+  }
+
+  /**
+   * Fetch completed or cancelled workout from the server.
+   * Emit a new value whenever the user gets a new finished workout session
+   * from the server.
+   */
+  getCompletedOrCancelledWorkout() {
+    const userId &#x3D; this.afAuth.auth.currentUser.uid;
+    this.firebaseSubscriptions$.push(
+      this.db
+        .collection(&#x60;users/${userId}/finishedWorkout&#x60;)
+        .valueChanges()
+        .subscribe((exercises: Exercise[]) &#x3D;&gt; {
+          this.finishedWorkoutChanged$.next(exercises);
+        })
+    );
+  }
+
+  /**
+   * Cancel all firebase subscriptions.
+   */
+  cancelFirebaseSubscriptions$() {
+    this.firebaseSubscriptions$.forEach(subscription$ &#x3D;&gt;
+      subscription$.unsubscribe()
+    );
+  }
+
+  /**
+   * Add completed or cancelled workout to the database.
+   */
+  private addDataToDatabase(workout: Exercise) {
+    const userId &#x3D; this.afAuth.auth.currentUser.uid;
+    this.db.collection(&#x60;users/${userId}/finishedWorkout&#x60;).add(workout);
+  }
+}
+</code></pre>
+    </div>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> result-matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+               <!-- END CONTENT -->
+           </div>
+       </div>
+
+       <script>
+            var COMPODOC_CURRENT_PAGE_DEPTH = 1;
+            var COMPODOC_CURRENT_PAGE_CONTEXT = 'injectable';
+            var COMPODOC_CURRENT_PAGE_URL = 'WorkoutService.html';
+       </script>
+
+       <script src="../js/libs/custom-elements.min.js"></script>
+       <script src="../js/libs/lit-html.js"></script>
+       <!-- Required to polyfill modern browsers as code is ES5 for IE... -->
+       <script src="../js/libs/custom-elements-es5-adapter.js" charset="utf-8" defer></script>
+       <script src="../js/menu-wc.js" defer></script>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/tabs.js"></script>
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/clipboard.min.js"></script>
+       <script src="../js/libs/prism.js"></script>
+       <script src="../js/sourceCode.js"></script>
+          <script src="../js/search/search.js"></script>
+          <script src="../js/search/lunr.min.js"></script>
+          <script src="../js/search/search-lunr.js"></script>
+          <script src="../js/search/search_index.js"></script>
+       <script src="../js/lazy-load-graphs.js"></script>
+
+
+    </body>
+</html>
